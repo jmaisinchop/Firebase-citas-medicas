@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'crear-cita',
+    loadChildren: () => import('./crear-cita/crear-cita.module').then( m => m.CrearCitaPageModule)
+  },
+  {
+    path: 'editar-cita/:id',
+    loadChildren: () => import('./editar-cita/editar-cita.module').then( m => m.EditarCitaPageModule)
+  },
 ];
 
 @NgModule({
